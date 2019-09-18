@@ -66,12 +66,13 @@ html p {
 .img-header {
     width: 1000px;
     height: 300px;
-    margin-top: 20px; 
-    background-image: url(../image/Group.png);
+    margin-top: 20px;
+    background-image: url(../image/background_meitu_1.jpg);
 }
 .peasonal-image {
     width: 100px;
-    height: 100px;
+    height: 140px;
+    border-radius:100px;
 }
 .img-header .content {
     font-family: Courier;
@@ -256,7 +257,7 @@ section .title.about-me::before {
 }
 .w-experience-content {
     border-bottom: 1px solid #D6DCE1;
-    padding: 30px 0;  
+    padding: 30px 0;
 }
 .w-experience-content:last-child {
     border-bottom: none;
@@ -267,13 +268,20 @@ section .title.about-me::before {
 .w-experience-content .work-content {
     width: 69%;
 }
+.w-experience-content .paper-content {
+    width: 100%;
+}
 .w-experience-content .logo, .w-experience-content .work-content {
+    display: inline-block;
+    vertical-align: top;
+}
+.w-experience-content .logo, .w-experience-content .paper-content {
     display: inline-block;
     vertical-align: top;
 }
 .company-logo {
     margin: 20px 0 0 20px;
-    max-width: 250px;
+    max-width: 120px;
 }
 .work-content p.create-time {
     font-size: 14px;
@@ -287,8 +295,23 @@ section .title.about-me::before {
     letter-spacing: 1.14px;
     margin-bottom: 10px; 
 }
-.work-content p.key-word {
+.paper-content p.key-word {
     margin-top: 10px; 
+}
+.paper-content p.create-time {
+    font-size: 14px;
+    color: #022643;
+    letter-spacing: 1px;
+}
+.paper-content p.job {
+    font-weight: bold;
+    font-size: 16px;
+    color: #022643;
+    letter-spacing: 1.14px;
+    margin-bottom: 10px;
+}
+.work-content p.key-word {
+    margin-top: 10px;
 }
 .enducation-detail {
     padding: 50px 0 30px 0; 
