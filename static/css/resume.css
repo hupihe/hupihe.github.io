@@ -353,6 +353,9 @@ section .title.about-me::before {
     width: 80px;
     height: 80px;
 }
+.project-image {
+    width: 200px;
+}
 .contact .qrcode {
     border-right: 1px solid #CDD8E1; 
 }
