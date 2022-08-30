@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Menu</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="research.html" class="current">Research</a></div>
+<div class="menu-item"><a href="publications.html">Publication</a></div>
+<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="courses.html">Courses</a></div>
+<div class="menu-item"><a href="activities.html">Activities</a></div>
+<div class="menu-category">Usefull Links</div>
+<div class="menu-item"><a href="https://www.tsinghua.edu.cn/en/">Tsinghua&nbsp;University</a></div>
+<div class="menu-item"><a href="https://iiis.tsinghua.edu.cn/en/">IIIs</a></div>
+</td>
+<td id="layout-content">
+<p>This page is an attempt to organize papers into distinct research areas, and to provide an overview of my works. 
+Naturally, the page is selective both in terms of research areas and the papers listed. For a more complete picture, please see the publications page.
+</p>
+<h2>REINFORCEMENT LEARNING THEORY</h2>
+<p>1. <b>Trajectory-Aware Reward-free Reinforcement Learning with Linear Function Approximation</b> [<a href="https://arxiv.org/" target=&ldquo;blank&rdquo;>arxiv</a>]
+<br /> Pihe Hu*, Yu Chen*, Longbo Huang
+<br /> ArXiv preprint, 2022.
+<br /> <b>Abstract</b>
+<br /> We study reward-free reinforcement learning with linear function approximation for episodic Markov decision processes (MDPs). In this setting, an agent first interacts with the environment without accessing the reward function in the exploration phase. Then, in the subsequent planning phase, it is given a reward function and supposed to output an \(\epsilon\)-optimal policy. We propose a novel algorithm LSVI-RFE under the linear MDP setting, where the transition probability and reward functions are linear in a feature mapping \(\boldsymbol{\phi}(s,a)\). We prove an \(\widetilde{O}(H^{4} d^{2}/\epsilon^2)\) sample complexity upper bound for LSVI-RFE, where \(H\) is the episode length and \(d\) is the feature dimension. We also establish a sample complexity lower bound of \(\Omega(H^{3} d^{2}/\epsilon^2)\). To the best of our knowledge, this is the first computationally efficient algorithm that achieves the minimax optimal sample complexity in linear MDP settings up to an \(H\) and logarithmic factors. Our LSVI-RFE algorithm is based on a novel emph{trajectory-aware} exploration mechanism, which dynamically adjusts the weight factors according to the episodic exploration error of the trajectory,  and weighted linear regression, to avoid overly-conservative exploration in prior works. Our sharper bound relies on a novel analysis concerning the conservatism of elliptical potentials to remove the extra dependency of sample complexity on feature dimension \(d\).
+</p>
+<p>2. <b>Nearly Minimax Optimal Reinforcement Learning with Linear Function Approximation</b> [<a href="pub/nearlyICML2022.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
+<br /> Pihe Hu, Yu Chen, Longbo Huang
+<br /> ICML, 2022.
+<br /> <b>Abstract</b>
+<br /> We study reinforcement learning with linear function approximation where the transition probability and reward functions are linear with respect to a feature mapping \(\boldsymbol{\phi}(s,a)\). Specifically, we consider the episodic inhomogeneous linear Markov Decision Process (MDP), and propose a novel computation-efficient algorithm, LSVI-UCB\(^+\), which achieves an \(\widetilde{O}(Hd\sqrt{T})\) regret bound where \(H\) is the episode length, \(d\) is the feature dimension, and \(T\) is the number of steps. LSVI-UCB\(^+\) builds on weighted ridge regression and upper confidence value iteration with a Bernstein-type exploration bonus. Our statistical results are obtained with novel analytical tools, including a new Bernstein self-normalized bound with conservatism on elliptical potentials, and refined analysis of the correction term. To the best of our knowledge, this is the first minimax optimal algorithm for linear MDPs up to logarithmic factors, which closes the \(\sqrt{Hd}\) gap between the best known upper bound of \(\widetilde{O}(\sqrt{H^3d^3T})\) and lower bound of \(\Omega(Hd\sqrt{T})\) for linear MDPs.
+</p>
+<h2>DEEP REINFORCEMENT LEARNING</h2>
+<p>1. <b>RLx2: Training a Sparse Deep Reinforcement Learning Model from Scratch</b> [<a href="https://arxiv.org/pdf/2205.15043.pdf" target=&ldquo;blank&rdquo;>arxiv</a>]
+<br /> Yiqin Tan*, Pihe Hu*, Ling Pan, Longbo Huang
+<br /> ArXiv preprint, 2022.
+<br /> <b>Abstract</b>
+<br /> Training deep reinforcement learning (DRL) models usually requires high computation costs. Therefore, compressing DRL models possesses immense potential for training acceleration and model deployment. However, existing methods that generate small models mainly adopt the knowledge distillation based approach by iteratively training a dense network, such that the training process still demands massive computing resources. Indeed, sparse training from scratch in DRL has not been well explored and is particularly challenging due to non-stationarity in bootstrap training. In this work, we propose a novel sparse DRL training framework, &ldquo;the Rigged Reinforcement Learning Lottery&rdquo; (RLx2), which is capable of training a DRL agent emph{using an ultra-sparse network throughout} for off-policy reinforcement learning. The systematic RLx2 framework contains three key components: gradient-based topology evolution, multi-step Temporal Difference (TD) targets, and dynamic-capacity replay buffer. RLx2 enables efficient topology exploration and robust Q-value estimation simultaneously. We demonstrate state-of-the-art sparse training performance in several continuous control tasks using RLx2, showing \(7.5\times\)-\(20\times\) model compression with less than \(3\%\) performance degradation, and up to \(20\times\) and \(50\times\) FLOPs reduction for training and inference, respectively.
+</p>
+<p>2. <b>Effective Multi-User Delay-Constrained Scheduling with Deep Recurrent Reinforcement Learning</b> [<a href="https://arxiv.org/" target=&ldquo;blank&rdquo;>arxiv</a>]
+<br /> Pihe Hu, Ling Pan, Yu Chen, Zhixuan Fang, Longbo Huang
+<br /> MobiHoc, 2022.
+<br /> <b>Abstract</b>
+<br /> Multi-user delay constrained scheduling is important in many real-world applications including wireless communication, live streaming, and cloud computing. Yet, it poses a critical challenge since the scheduler needs to make real-time decisions to guarantee the delay and resource constraints simultaneously without prior information of system dynamics, which can be time-varying and hard to estimate. Moreover, many practical scenarios suffer from partial observability issues, e.g., due to sensing noise or hidden correlation. To tackle these challenges, we propose a deep reinforcement learning (DRL) algorithm, named Recurrent Softmax Delayed Deep Double Deterministic Policy Gradient (RSD4), which is a data-driven method based on a Partially Observed Markov Decision Process (POMDP) formulation. RSD4 guarantees resource and delay constraints by Lagrangian dual and delay-sensitive queues, respectively. It also efficiently tackles partial observability with a memory mechanism enabled by the recurrent neural network (RNN) and introduces user-level decomposition and node-level merging to ensure scalability. Extensive experiments on simulated/real-world datasets demonstrate that RSD4 is robust to system dynamics and partially observable environments, and achieves superior performances over existing DRL and non-DRL-based methods.
+</p>
+<h2>NETWORK OPTIMIZATION</h2>
+<p>1. <b>Optimal Multi-User Scheduling for the Unbalanced Full-Duplex Buffer-Aided Relay Systems</b> [<a href="pub/OptimalTWC2019.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
+<br /> Cheng Li, Pihe Hu, Yao Yao, Bin Xia, Zhiyong Chen
+<br /> IEEE TWC, 2019.
+<br /> <b>Abstract</b>
+Multi-User scheduling is challenging due to the channel unbalance problem, which leads to system performance degradation. In this paper, two optimal multi-user scheduling schemes maximizing the system throughput are proposed for the fixed and adaptive power transmission scenarios of the full-duplex (FD) multi-user buffer-aided relay system, respectively. Independent and non-identically distributed (i.ni.d.) model is used to characterize the unbalanced channels of different links. In particular, the optimal weight factor of each pair is designed based on the statistical channel state information in both scenarios. With the weight factors, the proposed schemes are able to balance the throughput gaps between different links. In addition, we propose an optimal power allocation scheme with closed-form expressions under average power constraint for the adaptive power transmission scenario. By combining the optimal weight factor and the power allocation scheme, novel optimal selection function is obtained to facilitate the selection process. Considering the specific i.ni.d. Rayleigh fading, the system throughput is further derived in both cases. Theoretical analysis is verified by the numerical simulations and the results demonstrate the superiority of the proposed schemes.
+</p>
+<p>2. <b>Optimal multi-user scheduling of buffer-aided relay systems</b> [<a href="pub/OptimalICC2019.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
+<br /> Pihe Hu, Cheng Li, Dingjie Xu, Bin Xia
+<br /> IEEE ICC, 2019.
+<br /> <b>Abstract</b>
+Multi-User scheduling is a challenging problem under the relaying scenarios. Traditional schemes, which are based on the instantaneous signal-to- interference-plus-noises ratios (SINRs), cannot solve the inherent disparities of the qualities between different links. Hence, the system performance is always limited by the weaker links. In this paper, from the whole system throughput view, we propose an optimal multi-user scheduling scheme for the multi-user full-duplex (FD) buffer aided relay systems. We first formulate the throughput maximization problem. Then, according to the characteristics of the Karush-Kuhn-Tucker conditions, we obtain the optimal decision functions and the optimal weighted factors of different links of the proposed scheme. Simulation results show that the proposed scheme not only solves the disparities of the qualities between \(S_i-R\) and \(R-D_i\) links, but also that between different \(S_i-R\) or \(D_i-R\) links, which can be used as guidance in the design of the practical systems.
+</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2022-08-30 23:02:40 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
