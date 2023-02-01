@@ -36,17 +36,17 @@ MathJax.Hub.Config({
 Naturally, the page is selective both in terms of research areas and the papers listed. For a more complete picture, please see the publications page.
 </p>
 <h2>REINFORCEMENT LEARNING THEORY</h2>
-<p>1. <b>Trajectory-Aware Reward-free Reinforcement Learning with Linear Function Approximation</b> [<a href="https://arxiv.org/" target=&ldquo;blank&rdquo;>arxiv</a>]
+<p>1. <b>Towards Minimax Optimal Reward-free Reinforcement Learning in Linear MDPs</b> [<a href="https://arxiv.org/" target=&ldquo;blank&rdquo;>arxiv</a>]
 <br /> Pihe Hu*, Yu Chen*, Longbo Huang
-<br /> ArXiv preprint, 2022.
+<br /> ICLR, 2022.
 <br /> <b>Abstract</b>
-<br /> We study reward-free reinforcement learning with linear function approximation for episodic Markov decision processes (MDPs). In this setting, an agent first interacts with the environment without accessing the reward function in the exploration phase. Then, in the subsequent planning phase, it is given a reward function and supposed to output an \(\epsilon\)-optimal policy. We propose a novel algorithm LSVI-RFE under the linear MDP setting, where the transition probability and reward functions are linear in a feature mapping \(\boldsymbol{\phi}(s,a)\). We prove an \(\widetilde{O}(H^{4} d^{2}/\epsilon^2)\) sample complexity upper bound for LSVI-RFE, where \(H\) is the episode length and \(d\) is the feature dimension. We also establish a sample complexity lower bound of \(\Omega(H^{3} d^{2}/\epsilon^2)\). To the best of our knowledge, this is the first computationally efficient algorithm that achieves the minimax optimal sample complexity in linear MDP settings up to an \(H\) and logarithmic factors. Our LSVI-RFE algorithm is based on a novel emph{trajectory-aware} exploration mechanism, which dynamically adjusts the weight factors according to the episodic exploration error of the trajectory,  and weighted linear regression, to avoid overly-conservative exploration in prior works. Our sharper bound relies on a novel analysis concerning the conservatism of elliptical potentials to remove the extra dependency of sample complexity on feature dimension \(d\).
+<br /> We study reward-free reinforcement learning with linear function approximation for episodic Markov decision processes (MDPs). In this setting, an agent first interacts with the environment without accessing the reward function in the exploration phase. In the subsequent planning phase, it is given a reward function and asked to output an \(\epsilon\)-optimal policy. We propose a novel algorithm LSVI-RFE under the linear MDP setting, where the transition probability and reward functions are linear in a feature mapping. We prove an \(\widetilde{O}(H^{4} d^{2}/\epsilon^2)\) sample complexity upper bound for LSVI-RFE, where \(H\) is the episode length and \(d\) is the feature dimension. We also establish a sample complexity lower bound of \(\Omega(H^{3} d^{2}/\epsilon^2)\). To the best of our knowledge, LSVI-RFE is the first computationally efficient algorithm that achieves the minimax optimal sample complexity in linear MDP settings up to an \(H\) and logarithmic factors. Our LSVI-RFE algorithm is based on a novel variance-aware exploration mechanism to avoid overly-conservative exploration in prior works. Our sharp bound relies on the decoupling of UCB bonuses during two phases, and a Bernstein-type self-normalized bound, which remove the extra dependency of sample complexity on \(H\) and \(d\), respectively.
 </p>
 <p>2. <b>Nearly Minimax Optimal Reinforcement Learning with Linear Function Approximation</b> [<a href="pub/nearlyICML2022.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
-<br /> Pihe Hu, Yu Chen, Longbo Huang
 <br /> ICML, 2022.
 <br /> <b>Abstract</b>
 <br /> We study reinforcement learning with linear function approximation where the transition probability and reward functions are linear with respect to a feature mapping \(\boldsymbol{\phi}(s,a)\). Specifically, we consider the episodic inhomogeneous linear Markov Decision Process (MDP), and propose a novel computation-efficient algorithm, LSVI-UCB\(^+\), which achieves an \(\widetilde{O}(Hd\sqrt{T})\) regret bound where \(H\) is the episode length, \(d\) is the feature dimension, and \(T\) is the number of steps. LSVI-UCB\(^+\) builds on weighted ridge regression and upper confidence value iteration with a Bernstein-type exploration bonus. Our statistical results are obtained with novel analytical tools, including a new Bernstein self-normalized bound with conservatism on elliptical potentials, and refined analysis of the correction term. To the best of our knowledge, this is the first minimax optimal algorithm for linear MDPs up to logarithmic factors, which closes the \(\sqrt{Hd}\) gap between the best known upper bound of \(\widetilde{O}(\sqrt{H^3d^3T})\) and lower bound of \(\Omega(Hd\sqrt{T})\) for linear MDPs.
+<br /> Erratum: an issue in building the over-optimistic value function is addressed by the &lsquo;&lsquo;rare-switching&rsquo;&rsquo; mechanism in [<a href="https://arxiv.org/abs/2212.06132" target=&ldquo;blank&rdquo;>He et al. 2022.</a>], and the fixed version is given in [<a href="https://arxiv.org/pdf/2206.11489.pdf" target=&ldquo;blank&rdquo;>arxiv</a>]
 </p>
 <h2>DEEP REINFORCEMENT LEARNING</h2>
 <p>1. <b>RLx2: Training a Sparse Deep Reinforcement Learning Model from Scratch</b> [<a href="https://arxiv.org/pdf/2205.15043.pdf" target=&ldquo;blank&rdquo;>arxiv</a>]
@@ -76,7 +76,7 @@ Multi-User scheduling is a challenging problem under the relaying scenarios. Tra
 </p>
 <div id="footer">
 <div id="footer-text">
-Page generated 2022-08-31 09:24:56 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2023-01-31 22:04:54 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>
