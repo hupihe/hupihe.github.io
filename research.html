@@ -35,6 +35,13 @@ MathJax.Hub.Config({
 <p>This page is an attempt to organize papers into distinct research areas, and to provide an overview of my works. 
 Naturally, the page is selective both in terms of research areas and the papers listed. For a more complete picture, please see the publications page.
 </p>
+<h2>Model Acceleration</h2>
+<p><b>RLx2: Training a Sparse Deep Reinforcement Learning Model from Scratch</b> [<a href="https://openreview.net/forum?id=DJEEqoAq7to" target=&ldquo;blank&rdquo;>OpenReview</a>]
+<br /> Yiqin Tan*, Pihe Hu*, Ling Pan, Longbo Huang
+<br /> ArXiv preprint, 2022.
+<br /> <b>Abstract</b>
+<br /> Training deep reinforcement learning (DRL) models usually requires high computation costs. Therefore, compressing DRL models possesses immense potential for training acceleration and model deployment. However, existing methods that generate small models mainly adopt the knowledge distillation based approach by iteratively training a dense network, such that the training process still demands massive computing resources. Indeed, sparse training from scratch in DRL has not been well explored and is particularly challenging due to non-stationarity in bootstrap training. In this work, we propose a novel sparse DRL training framework, &ldquo;the Rigged Reinforcement Learning Lottery&rdquo; (RLx2), which is capable of training a DRL agent emph{using an ultra-sparse network throughout} for off-policy reinforcement learning. The systematic RLx2 framework contains three key components: gradient-based topology evolution, multi-step Temporal Difference (TD) targets, and dynamic-capacity replay buffer. RLx2 enables efficient topology exploration and robust Q-value estimation simultaneously. We demonstrate state-of-the-art sparse training performance in several continuous control tasks using RLx2, showing \(7.5\times\)-\(20\times\) model compression with less than \(3\%\) performance degradation, and up to \(20\times\) and \(50\times\) FLOPs reduction for training and inference, respectively.
+</p>
 <h2>REINFORCEMENT LEARNING THEORY</h2>
 <p>1. <b>Towards Minimax Optimal Reward-free Reinforcement Learning in Linear MDPs</b> [<a href="https://openreview.net/forum?id=U9HW6vyNClg" target=&ldquo;blank&rdquo;>OpenReview</a>]
 <br /> Pihe Hu*, Yu Chen*, Longbo Huang
@@ -49,13 +56,7 @@ Naturally, the page is selective both in terms of research areas and the papers 
 <br /> <font color=blue><b>Erratum</b></font>: an issue in building the over-optimistic value function is addressed by the &lsquo;&lsquo;rare-switching&rsquo;&rsquo; mechanism in [<a href="https://arxiv.org/abs/2212.06132" target=&ldquo;blank&rdquo;>He et al. 2022.</a>], and the fixed version is given in [<a href="https://arxiv.org/pdf/2206.11489.pdf" target=&ldquo;blank&rdquo;>arxiv</a>]
 </p>
 <h2>DEEP REINFORCEMENT LEARNING</h2>
-<p>1. <b>RLx2: Training a Sparse Deep Reinforcement Learning Model from Scratch</b> [<a href="https://openreview.net/forum?id=DJEEqoAq7to" target=&ldquo;blank&rdquo;>OpenReview</a>]
-<br /> Yiqin Tan*, Pihe Hu*, Ling Pan, Longbo Huang
-<br /> ArXiv preprint, 2022.
-<br /> <b>Abstract</b>
-<br /> Training deep reinforcement learning (DRL) models usually requires high computation costs. Therefore, compressing DRL models possesses immense potential for training acceleration and model deployment. However, existing methods that generate small models mainly adopt the knowledge distillation based approach by iteratively training a dense network, such that the training process still demands massive computing resources. Indeed, sparse training from scratch in DRL has not been well explored and is particularly challenging due to non-stationarity in bootstrap training. In this work, we propose a novel sparse DRL training framework, &ldquo;the Rigged Reinforcement Learning Lottery&rdquo; (RLx2), which is capable of training a DRL agent emph{using an ultra-sparse network throughout} for off-policy reinforcement learning. The systematic RLx2 framework contains three key components: gradient-based topology evolution, multi-step Temporal Difference (TD) targets, and dynamic-capacity replay buffer. RLx2 enables efficient topology exploration and robust Q-value estimation simultaneously. We demonstrate state-of-the-art sparse training performance in several continuous control tasks using RLx2, showing \(7.5\times\)-\(20\times\) model compression with less than \(3\%\) performance degradation, and up to \(20\times\) and \(50\times\) FLOPs reduction for training and inference, respectively.
-</p>
-<p>2. <b>Effective Multi-User Delay-Constrained Scheduling with Deep Recurrent Reinforcement Learning</b> [<a href="pub/rsd4.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
+<p><b>Effective Multi-User Delay-Constrained Scheduling with Deep Recurrent Reinforcement Learning</b> [<a href="pub/rsd4.pdf" target=&ldquo;blank&rdquo;>pdf</a>]
 <br /> Pihe Hu, Ling Pan, Yu Chen, Zhixuan Fang, Longbo Huang
 <br /> MobiHoc, 2022.
 <br /> <b>Abstract</b>
@@ -76,7 +77,7 @@ Multi-User scheduling is a challenging problem under the relaying scenarios. Tra
 </p>
 <div id="footer">
 <div id="footer-text">
-Page generated 2023-02-01 17:27:26 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2023-05-22 23:12:14 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>
